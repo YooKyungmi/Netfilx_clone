@@ -1,0 +1,13 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: demo
+
+  datasource:
+    url: jdbc:mysql://mydata.ctzntt5wtqw4.ap-northeast-2.rds.amazonaws.com:3306/Netflix?autoReconnect=true&ServerTimezone=UTC # 변경해주세요
+    username:  admin # 변경해주세요 RUL이랑 plaform 수정해야해요
+    password:  4938ar77 # 변경해주세요
+    driver-class-name: com.mysql.cj.jdbc.Driver # mysql 8버전
+    # driver-class-name: com.mysql.jdbc.Driver # mysql 5버전

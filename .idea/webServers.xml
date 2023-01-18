@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="00d9c82e-4e04-44c9-bd81-b25be3dbf681" name="spring_edu" url="http://yookm.shop">
+        <fileTransfer rootFolder="/var/www/spring-boot_api" accessType="SFTP" host="13.125.126.66" port="22" sshConfigId="d4f69f7d-560b-47db-ad1b-247109bdca7e" sshConfig="ubuntu@13.125.126.66:22 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
