@@ -60,14 +60,14 @@ com/example/demo/config/BaseException.java
  com.example.demo.config.BaseException
 com/example/demo/src/profile/ProfileController.java
  com.example.demo.src.profile.ProfileController
-com/example/demo/utils/JwtService.java
- com.example.demo.utils.JwtService
+com/example/demo/src/users/UsersProvider.java
+ com.example.demo.src.users.UsersProvider
 com/example/demo/utils/SHA256.java
  com.example.demo.utils.SHA256
 com/example/demo/src/user/model/PostUserReq.java
  com.example.demo.src.user.model.PostUserReq
-com/example/demo/src/profile/model/Profile.java
- com.example.demo.src.profile.model.Profile
+com/example/demo/src/users/UsersDao.java
+ com.example.demo.src.users.UsersDao
 com/example/demo/src/content/model/genre/PostGenreRes.java
  com.example.demo.src.content.model.genre.PostGenreRes
 com/example/demo/src/users/model/PostUsersReq.java
@@ -98,8 +98,8 @@ com/example/demo/src/profile/ProfileProvider.java
  com.example.demo.src.profile.ProfileProvider
 com/example/demo/src/profile/model/PostProfileReq.java
  com.example.demo.src.profile.model.PostProfileReq
-com/example/demo/src/content/model/genre/PatchGenreReq.java
- com.example.demo.src.content.model.genre.PatchGenreReq
+com/example/demo/src/users/UsersController.java
+ com.example.demo.src.users.UsersController
 com/example/demo/src/users/model/Users.java
  com.example.demo.src.users.model.Users
 com/example/demo/src/profile/model/Liked/GetLikedRes.java
@@ -112,8 +112,8 @@ com/example/demo/src/users/model/GetUsersRes.java
  com.example.demo.src.users.model.GetUsersRes
 com/example/demo/src/user/UserController.java
  com.example.demo.src.user.UserController
-com/example/demo/src/user/UserProvider.java
- com.example.demo.src.user.UserProvider
+com/example/demo/src/users/UsersService.java
+ com.example.demo.src.users.UsersService
 com/example/demo/src/content/ContentDao.java
  com.example.demo.src.content.ContentDao
 com/example/demo/src/user/model/User.java
@@ -124,11 +124,11 @@ com/example/demo/src/user/model/GetUserRes.java
  com.example.demo.src.user.model.GetUserRes
 com/example/demo/DemoApplication.java
  com.example.demo.DemoApplication
-com/example/demo/src/users/UsersController.java
- com.example.demo.src.users.UsersController
-com/example/demo/src/users/UsersDao.java
- com.example.demo.src.users.UsersDao
-com/example/demo/src/users/UsersService.java
- com.example.demo.src.users.UsersService
-com/example/demo/src/users/UsersProvider.java
- com.example.demo.src.users.UsersProvider
+com/example/demo/utils/JwtService.java
+ com.example.demo.utils.JwtService
+com/example/demo/src/user/UserProvider.java
+ com.example.demo.src.user.UserProvider
+com/example/demo/src/profile/model/Profile.java
+ com.example.demo.src.profile.model.Profile
+com/example/demo/src/content/model/genre/PatchGenreReq.java
+ com.example.demo.src.content.model.genre.PatchGenreReq
