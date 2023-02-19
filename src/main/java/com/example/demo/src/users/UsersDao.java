@@ -29,8 +29,9 @@ public class UsersDao {
     }
 
     public int createUser(PostUsersReq postUsersReq){
-        String createUserQuery = "insert into User VALUES (null,?,?,?,?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP,1)";
+        String createUserQuery = "insert into User VALUES (null,?,?,?,?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP,1,0)";
         Object[] createUserParams = new Object[]{postUsersReq.getEmail(),postUsersReq.getMembership(),postUsersReq.getPassword(),postUsersReq.getPhoneNum()};
+        System.out.println("회원가입 정보: "+postUsersReq.getEmail()+postUsersReq.getMembership()+postUsersReq.getPassword()+postUsersReq.getPhoneNum());
         this.jdbcTemplate.update(createUserQuery,createUserParams);
 
         String lastInsertIdQuery = "select last_insert_id()";
