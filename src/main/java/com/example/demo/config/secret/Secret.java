@@ -4,5 +4,6 @@ package com.example.demo.config.secret;
 // TODO: .gitignore에 추가하는거 앚지 마세요!
 public class Secret {
     public static String JWT_SECRET_KEY = "UwKYibQQgkW7g-*k.ap9kje-wxBHb9wdXoBT4vnt4P3sJWt-Nu";
-  
+    public static String REST_API_KEY ="4a1ca7bbee65a6cf8727b89681b4fe71";
+    public static String REDIRECT_URI="http://localhost:9000/oauth/kakao";
 }

@@ -29,9 +29,9 @@ public class JwtService {
         return Jwts.builder()
                 .setHeaderParam("type","jwt")
                 .claim("userIdx",userIdx)
-                .setIssuedAt(now)
-                .setExpiration(new Date(System.currentTimeMillis()+1*(1000*60*60*24*365)))
-                .signWith(SignatureAlgorithm.HS256, Secret.JWT_SECRET_KEY)
+                .setIssuedAt(now)   // 생성일 설정
+                .setExpiration(new Date(System.currentTimeMillis()+1*(1000*60*60*24*365)))  //유효기간 설정
+                .signWith(SignatureAlgorithm.HS256, Secret.JWT_SECRET_KEY)  // 암호화 알고리즘, 키 설정
                 .compact();
     }
 

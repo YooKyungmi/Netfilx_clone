@@ -6,6 +6,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
+import java.sql.SQLException;
 
 @Repository
 public class UsersDao {
@@ -14,7 +15,7 @@ public class UsersDao {
 
     @Autowired
     public  void setDataSource(DataSource dataSource){this.jdbcTemplate = new JdbcTemplate(dataSource);}
-    public GetUsersRes getUser(int userId){
+    public GetUsersRes getUser(int userId) {
         String getUserQuery = "select userId, email, membershipType, pwd, phoneNum from User where userId = ?";
         int getUserParams = userId;
         return this.jdbcTemplate.queryForObject(getUserQuery,
@@ -56,5 +57,17 @@ public class UsersDao {
         String deleteUserQuery = "delete from User where userId=?";
         int deleteUserParams = userId;
         this.jdbcTemplate.update(deleteUserQuery, deleteUserParams);
+    }
+
+    public Users getPwd(PostLoginReq postLoginReq){
+        String getPwdQuery = "select userId, email, membershipType, pwd, phoneNum from User where email=?";
+        String getPwdParams = postLoginReq.getEmail();
+        return this.jdbcTemplate.queryForObject(getPwdQuery,(rs,rowNum)->new Users(
+                rs.getInt("userId"),
+                rs.getString("email"),
+                rs.getString("membershipType"),
+                rs.getString("pwd"),
+                rs.getString("phoneNum")
+        ), getPwdParams);
     }
 }

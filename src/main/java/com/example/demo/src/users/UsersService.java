@@ -7,6 +7,7 @@ import com.example.demo.src.users.model.PatchUsersReq;
 import com.example.demo.src.users.model.PostUsersReq;
 import com.example.demo.src.users.model.PostUsersRes;
 import com.example.demo.utils.JwtService;
+import com.example.demo.utils.SHA256;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,6 +36,15 @@ public class UsersService {
     public PostUsersRes createUser(PostUsersReq postUsersReq) throws BaseException {
         if (usersProvider.checkEmail(postUsersReq.getEmail()) == 1) {
             throw new BaseException(POST_USERS_EXISTS_EMAIL);
+        }
+        String pwd;
+        try{
+            //암호화
+            pwd = new SHA256().encrypt(postUsersReq.getPassword());
+            postUsersReq.setPassword(pwd);
+
+        } catch (Exception ignored) {
+            throw new BaseException(PASSWORD_ENCRYPTION_ERROR);
         }
         try{
             int userId = usersDao.createUser(postUsersReq);

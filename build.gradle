@@ -24,8 +24,8 @@ repositories {
 
 dependencies {
     implementation 'org.jetbrains:annotations:23.0.0'
-
-
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'com.googlecode.json-simple:json-simple:1.1'
     // Spring Boot Starter
     testImplementation ('org.springframework.boot:spring-boot-starter-test')
 
